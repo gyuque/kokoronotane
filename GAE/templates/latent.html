@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+		<script src="/shared/js/jquery.js" type="text/javascript"></script>
+		<script src="/shared/js/latent.js?v=3" type="text/javascript"></script>
+		<link href="/shared/css/latent.css?v=2" media="screen" rel="stylesheet" type="text/css" />
+
+		<title>Digital Latent Icon Generator</title>
+	</head>
+	<body onload="void launch()">
+		<h1>Digital Latent Icon Generator</h1>
+		<p id="default-warn">Please enable Javascript</p>
+		<div id="main">
+			<h2 id="step1">1. Upload your image</h2>
+			<p id="uperror"> </p>
+			<p>Up to 640KB / Choose 48x48 image to avoid resizing.</p>
+			<iframe title="upload form" src="/shared/static/upform.html?v=2" onload="void(window.theApp ? theApp.onIFrameLoad() : 0)" id="upform-frame"></iframe>
+
+			<div id="frontimage-tool">
+				<label><input type="checkbox" id="front-chk" /> Use front image</label><br />
+				<iframe title="upload form 2" src="/shared/static/upform.html?v=2" onload="void(window.theApp ? theApp.onIFrame2Load() : 0)" id="upform-frame-2"></iframe>
+			</div>
+
+			<div id="step2">
+				<h2>2. Select a tone curve</h2>
+				<div id="preview-container"> </div>
+				
+			</div>
+			<div id="step3">
+				<h2>3. Download</h2>
+				<a href="/latent" id="dllink">generated image</a>
+			</div>
+		</div>
+		<hr />
+		<p><a href="/shared/static/about-latent.html">これは何？</a></p>
+	</body>
+</html>

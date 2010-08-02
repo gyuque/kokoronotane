@@ -1,0 +1,118 @@
+h1 {
+	font-size: 100%;
+	color: #888;
+	border-bottom: 1px solid #18d;
+}
+
+h1 a {
+	color: #888;
+	text-decoration: none;
+}
+
+h2 {
+	border-left: 3px solid #18d;
+	padding-left: 0.3em;
+}
+
+#default-warn {
+	border: 1px solid #a42;
+	background-color: #fea;
+	color: #000;
+	padding: 0.4em;
+}
+
+#main {
+	display: none;
+}
+
+#upform-frame,
+#upform-frame-2 {
+	height: 51px;
+	overflow: hidden;
+	width: 90%;
+	border: none;
+}
+
+#upform-frame-2 {
+	display: none;
+}
+
+#frontimage-tool.enabled #upform-frame-2 {
+	display: block;
+}
+
+
+#uperror {
+	border: 1px solid #a32;
+	background-color: #fcc;
+	color: #000;
+	padding: 0.4em;
+	display: none;
+}
+
+#step2,#step3 {
+	display: none;
+}
+
+#step2.ready,#step3.ready {
+	display: block;
+}
+
+.preview-box {
+	margin-top: 1em;
+	margin-left: 9px;
+	color: #888;
+	font-size: 12px;
+	padding: 2px;
+	border: 1px solid #888;
+	width: 146px;
+}
+
+.done {
+	text-decoration: line-through;
+	color: #888;
+	border-color: #888;
+}
+
+.preview-list img{
+	margin: 3px;
+	border: 1px solid #ade;
+	cursor: pointer;
+}
+
+.preview-list img.selected{
+	border: 1px solid #f30;
+}
+
+#dllink {
+	display: none;
+}
+
+.help p img {
+	vertical-align: middle;
+	margin-bottom: 3px;
+}
+
+h3 {
+	margin-bottom: 0.2em;
+}
+
+.preview-cap {
+	border: none;
+	border-collapse: collapse;
+}
+
+.preview-cap td {
+	border: none;
+	font-size: 10px;
+	width: 49px;
+	text-align: center;
+}
+
+.front {
+	display: none;
+}
+
+.front-enabled .front {
+	display: block;
+}

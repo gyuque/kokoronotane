@@ -1,0 +1,48 @@
+<html style="margin:0; padding:0;">
+<head>
+<script type="text/javascript">
+function onSubmit(){
+	document.getElementById('upform').style.display = "none";
+	document.body.appendChild(document.createTextNode("Now uploading..."));
+	return true;
+}
+
+function nullfunc(){
+}
+
+window.showForm = nullfunc;
+
+function hideForm(msg, ico) {
+	var f = document.getElementById('upform');
+	f.style.display = "none";
+
+	var messageArea = document.createElement('div');
+	if (ico) {
+		var img = document.createElement('img');
+		img.src = ico;
+		messageArea.appendChild(img);
+		messageArea.appendChild(document.createTextNode(' '));
+	}
+
+	var a = document.createElement('a');
+	a.appendChild(document.createTextNode(msg));
+
+	messageArea.appendChild(a);
+	document.body.appendChild(messageArea);
+
+	window.showForm = function() {
+		f.style.display = "";
+		messageArea.parentNode.removeChild(messageArea);
+		window.showForm = nullfunc;
+	}
+
+	a.href = "javascript: void showForm()";
+}
+</script>
+</head>
+<body style="margin:0; padding:0;overflow:hidden;">
+<form action="/latent/upload" enctype="multipart/form-data" method="post" id="upform" onsubmit="return onSubmit()">
+	<input type="file" name="image"> 
+	<input type="submit" value="Upload">
+</form>
+</body></html>

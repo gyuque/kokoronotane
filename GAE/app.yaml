@@ -1,0 +1,27 @@
+application: kokoronotane
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /shared/css
+  static_dir: css
+
+- url: /shared/js
+  static_dir: js
+
+- url: /shared/images
+  static_dir: images
+
+- url: /shared/static
+  static_dir: static
+
+- url: /latent
+  script: latent.py
+
+- url: /latent/upload
+  script: latent.py
+
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
